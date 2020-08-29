@@ -1,0 +1,309 @@
+/* IMPORT CORE THEME */
+@import url('https://azlen.github.io/roam-themes/core.css');
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');	
+
+/*竖排
+@import url('https://jimmylv.github.io/styled-roam/main.css');
+@import url('https://jimmylv.github.io/styled-roam/sidebar.css');
+@import url('https://jimmylv.github.io/styled-roam/misc.css');
+*/
+
+
+:root {	
+ 
+ --page-width: 700px;
+/* --page-order: row-reverse; new pages show up to the right */
+ --page-order: row; /* new pages show up to the left */
+ 
+ --header-font: "Source Sans Pro", "Inter", sans-serif;	
+ --body-font: "Source Sans Pro", "Inter", sans-serif;	
+ 	
+ --bg-color: #EEEEEE;	
+ --page-color: rgba(255, 255, 255, 0.95);	
+
+ 	--embed-bg-color: #EEEEEE35;	
+ 	--embed-border-color: #E8E8E8;	
+ 
+ --text-color: #444444;	
+ --icon-color: #5c7080;/* #5c7080;#DC4B4E;*/
+ --bullet-color: rgba(0, 0, 0, 0.2);
+ 
+ --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);	
+ 	
+ --color-primary: 225, 100, 101;/*251, 59, 59*/	
+ --color-primary-contrast: #FFFFFF;	
+ 
+ --color-secondary: 17, 146, 146;/*40, 116, 166 147, 100, 235*/
+ --color-secondary-contrast: #FFFFFF;	
+
+	--head-text-color: #505050;
+
+ /* font size */
+ 
+ 	--h1-font-size: 30px; /*h1 size */
+	--h2-font-size: 24px; /*h2 size */
+ 	--h3-font-size: 20px; /*h3 size */
+ 
+	--txt-font-size: 18px;				/*text size */
+	--Bold-font-size: 18px;				/*text size */
+
+ 	--h1-line-height: 42px;
+ --h2-line-height: 32px;
+ --h3-line-height: 28px;
+	
+}
+
+/* text font size*/
+body,html, .rm-block-text , .zoom-mentions-view{
+	font-size: var(--txt-font-size) !important;
+/* 	line-height: calc(1.4*var(--txt-font-size)) !important; */
+ min-height: calc(1.2*var(--txt-font-size)) !important;
+
+}
+
+textarea.rm-block-text {
+	display: block;
+}
+
+
+/* Linked References */
+.rm-mentions .rm-ref-page-view .rm-ref-page-view-title{
+ --text-color:rgba(var(--color-secondary), 1.0);
+/* background-color:#FF0000;*/
+ font-size: var(--h3-font-size);
+}
+
+/*embed ref */
+.rm-embed-container{
+ 
+ background-color:var(--embed-bg-color) !important;
+
+ 	border-style:solid; 
+ border-width:1px;
+ 	border-radius: 15px;
+ 	border-color: var(--embed-border-color) !important;
+
+ 	padding-left: 8px; 
+ 	padding-top:10px;
+ 	padding-bottom:10px; 
+
+}
+
+/*block ref*/
+.rm-block-ref {
+ border-bottom: 1px solid rgba(var(--color-primary), 0.6)
+}
+.rm-block-ref:hover {
+ background-color: rgba(var(--color-primary), 0.04);
+}
+
+/*ref font-size */
+.rm-reference-item {
+ background-color: transparent !important;
+ border: none !important;
+ padding: 0 !important;
+	font-size: var(--txt-font-size) !important;
+ 
+}
+
+/* Head1 */
+h1.rm-level1 .rm-block-text, 
+h1.rm-level1 textarea.rm-block-text{
+	font-family:"华文楷体", "Times", serif !important; 	
+ 	font-size: var(--h1-font-size) !important;
+ 	color:var(--head-text-color) !important;
+ 
+ 	line-height: var(--h1-line-height) !important; 
+ min-height: var(--h1-line-height) !important;
+ 
+ 	padding-top:20px;
+ 	padding-bottom:5px;
+
+}
+
+/* Head2 */
+h2.rm-level2 .rm-block-text, 
+h2.rm-level2 textarea.rm-block-text{
+	font-size: var(--h2-font-size) !important;
+	color:var(--head-text-color) !important;
+
+ 	line-height:var(--h2-line-height) !important; 
+ min-height:var(--h2-line-height) !important;
+
+ padding-top:7px;
+ 	padding-bottom:7px;
+
+}
+
+/* Head3 */
+h3.rm-level3 .rm-block-text, 
+h3.rm-level3 textarea.rm-block-text{
+	font-size: var(--h3-font-size) !important;
+	color:var(--head-text-color) !important;
+
+ 	line-height:var(--h3-line-height) !important;
+ 	min-height:var(--h3-line-height) !important;
+
+	border-style:solid; 
+ border-width:0px;
+ 	border-left-width:4px; 
+	border-left-color: rgba(var(--color-primary), 1.0) !important;
+ 
+ 	padding-left: 8px; 
+
+ 	padding-top:1px;
+ 	padding-bottom:1px;
+
+}
+
+/* Highlight、Bold、Italics */
+.roam-highlight {
+	border-bottom:1.3px wavy;
+
+	color: #000000;
+ font-weight:normal;
+
+	background-color: #C4EDF1C1;/* #C4EDF1C1;#D7FF5575#D5FF8EA0*/
+	border-radius: 3px;
+ padding: 1px 2px 1px 2px;
+}
+
+b, strong {
+ color: rgb(0,0,0) !important;
+ font-weight:bolder!important;
+/*	font-size: var(--Bold-font-size);*/
+}
+
+em {
+	border-bottom:1.3px wavy;
+	color: #106262;/* #2E8B57 #4E8888;*/
+ font-weight:normal;
+	font-family:"宋体", Times, serif !important;
+/*	font-size: var(--Bold-font-size);*/
+}
+
+
+/* 红点的对齐方式 ，跟第一行文字居中对齐 */
+.flex-align-start {
+ align-items: baseline;
+ 	min-height: 35px;
+}
+/* Checkbox align */
+.check-container{
+ vertical-align:middle;
+}
+
+/*Saving-icon color*/
+.rm-saving-icon .rm-synced {
+ background-color: #239B56;
+}
+.rm-saving-icon .rm-saving-remote {
+ background-color:#FF0000;
+}
+
+/*bullet color*/
+.controls .simple-bullet-outer .simple-bullet-inner {
+
+	opacity: 1.0;
+/*	margin-top: 3px; */
+	background-color:rgba(var(--color-primary), 1.0) !important;
+}
+.roam-bullet-closed {
+ background-color: rgba(var(--color-primary), 0.1) !important;
+}
+
+/* CHANGE COLOURS IN CANVAS */
+canvas[data-id="layer2-node"] {	
+ filter: invert(1) hue-rotate(110deg) saturate(2.5);	
+}
+
+
+/* Custom data tags */
+
+/* hashtag */
+.rm-page-ref-tag {
+ color: #FFFFFF !important;
+ background-color: rgba(var(--color-primary), 1.0) !important;
+
+ 	font-weight: normal !important;
+ border-radius: 5px;
+ border: 0px solid #e6e6e682;
+ padding: 1px 5px 2px;
+}
+
+.rm-page-ref-tag:hover {
+ background-color: #dbdbdb;
+ text-decoration: none;
+}
+
+span.rm-page-ref[data-tag="认知"] {
+ color: white !important;
+ 	background: #FF6347 !important;
+
+	font-weight: normal;
+ 
+ line-height: 1.5em;
+ 	padding: 1px 5px 2px;
+}
+
+span.rm-page-ref[data-tag="思考"] {
+ color: white !important;
+ 	background: #2E8B57 !important;
+
+	font-weight: normal;
+ 
+ line-height: 1.5em;
+ 	padding: 1px 5px 2px;
+}
+
+span.rm-page-ref[data-tag="管理"] {
+ color: white !important;
+ 	background: #1F618D !important;
+
+	font-weight: normal;
+ 
+ line-height: 1.5em;
+ padding: 1px 5px 2px;
+}
+
+span.rm-page-ref[data-tag="营销"] {
+ color: white !important;
+ 	background: #483D8B !important;
+
+	font-weight: normal;
+ 
+ line-height: 1.5em;
+ padding: 1px 5px 2px;
+}
+
+span.rm-page-ref[data-tag="其它"] {
+ color: white !important;
+ 	background: #696969 !important;
+
+	font-weight: normal;
+ 
+ line-height: 1.5em;
+ padding: 1px 5px 2px;
+}
+
+span.rm-page-ref[data-tag="投资"] {
+ 	color: #FF6347 !important;
+ background: white !important;
+ font-weight:bolder!important;
+	font-size: var(--Bold-font-size);
+ 
+ line-height: 1.5em;
+ padding: 1px 5px 2px;
+}
+
+span.rm-page-ref[data-tag="碎片"] {
+ 	color: #808080 !important;
+ background: white !important;
+ font-weight:bolder!important;
+	font-size: var(--Bold-font-size);
+ 
+ line-height: 1.5em;
+ padding: 1px 5px 2px;
+}
